@@ -1,0 +1,323 @@
+/*always have this */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+img{
+  max-width: 100%;
+}
+  /* pseudo selector that hides scroll bar */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+/*always have this */
+  
+
+
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: #eeeeee;
+}
+
+/* Navigation Bar */
+
+/* Contents */
+nav{
+    /* Nav-bar */
+    display: flex;
+    /* organized the children(logo,searchbar,links) inside the parent */
+    justify-content: space-between;
+    padding:10px;
+    background-color: #1e90ff;
+    color: white;
+}
+
+/* title */
+.logo{
+    margin: 15px 150px 0px 0px;
+}
+
+nav h1{
+    font-size: 1rem;
+    margin: 0px 10px 0px 10px;
+}
+
+/* Form Input */
+.searchbar form input{
+    margin-top:10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+/* Navigation and Sign In Contents */
+.Menu{
+    display:none;
+}
+
+nav ul{
+    font-size: 0.75rem;
+    list-style-type: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+nav li, a{
+    margin: 3px 0px 0px 10px;
+    color: white;
+    text-decoration: none;
+}
+footer{
+    text-align: center;
+}
+
+/* Main Container */
+.maincontainer{
+    display: grid;
+    margin: 2% 13% 0% 13%;
+    grid-template-columns:55% 45%;
+}
+
+.mainmovie{
+    grid-column: 1;
+}
+
+.moviesidebar{
+    grid-column: 2;
+
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+
+/* Movie button title and description */
+button{
+    font-size: 0.75rem;
+    background-color: #1e90ff;
+    color: white;
+
+    /* Box  */
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    border: 0px;
+    margin: 20px 10px 10px 0px;
+}
+.movie-title{
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.movie-desc{
+    padding: 10px;
+    margin-bottom: 50px;
+    font-size: 0.85rem;
+}
+
+
+/* Main Movie avangers */
+.avangers{
+    
+    /* Box */
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+.avangers button{
+    align-self: flex-end;
+}
+
+
+/* Movie 2 lone-gunmen */
+.lone-gunmen{
+    
+    /* Grid */
+    grid-column: 1;
+    
+    /* Box */
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.lone-gunmen button{
+    align-self: flex-end;
+}
+
+
+/* Movie 3 predators */
+.predators{
+    
+    /* Grid */
+    grid-column: 2;
+    /* Box */
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.predators button{
+    align-self: flex-end;
+}
+
+/* Movie 4 millenium */
+.millenium{
+    
+    /* Grid */
+    grid-column: 1;
+    /* Box */
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.millenium button{
+    align-self: flex-end;
+}
+
+
+/* Movie 5 rage*/
+.rage{
+    
+    /* Grid */
+    grid-column: 2;
+    /* Box */
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 2px 2px 2px 2px #dddddd;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.rage button{
+    align-self: flex-end;
+}
+
+/* Media Queries (1024+px is default)*/
+/* 1024px to 801px */
+@media  (max-width: 1024px) and (min-width: 801px){
+    .moviesidebar{
+        grid-template-columns: 100%;
+    }
+
+    .movie3{
+        grid-column: 1;
+    }
+
+    .movie5{
+        grid-column: 1;
+    }
+}
+
+/* 800px to 481px */
+@media (max-width: 800px) and (min-width:481px){
+    /* Container */
+    .maincontainer{
+        display: grid;
+        margin: 2% 13% 0% 13%;
+        grid-template-columns:100%;
+    }
+    
+    .mainmovie{
+        grid-column: 1;
+    }
+    
+    .moviesidebar{
+        grid-column: 1;
+    
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+
+    /* Navigation Bar to hide the 4 buttons and search bar and reveal the menu button */
+    .Menu{
+        display: block;
+    }
+
+    .Menu1{
+        display:none;
+    }
+
+    .searchbar form input{
+        display:none;
+        margin-top:10px;
+        height: 30px;
+        border-radius: 5px;
+        border: 0px;
+    }
+}
+
+/* Less 480px */
+@media (max-width:480px){
+    /* Container */
+    .maincontainer{
+        display: grid;
+        margin: 2% 13% 0% 13%;
+        grid-template-columns:100%;
+    }
+    
+    .mainmovie{
+        grid-column: 1;
+    }
+    
+    .moviesidebar{
+        grid-column: 1;
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .movie3{
+        grid-column: 1;
+    }
+
+    .movie5{
+        grid-column: 1;
+    }
+
+    /* Hidden Buttons and Search Bar */
+    .Menu{
+        display: block;
+    }
+
+    .Menu1{
+        display:none;
+    }
+
+    .searchbar form input{
+        display:none;
+        margin-top:10px;
+        height: 30px;
+        border-radius: 5px;
+        border: 0px;
+    }
+    
+}
+
+
+
+
+

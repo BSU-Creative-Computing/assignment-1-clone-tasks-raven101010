@@ -1,0 +1,134 @@
+/*always have this */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+img{
+    max-width: 100%;
+}
+/*always have this */
+
+body{
+    /* body takes up only 80% of the width of the whole page*/
+    width: 80%;
+    /* the margin of the body is 0 - top and bottom & auto/80% - left and right*/
+    margin: 0 auto;
+    /* BG color*/
+    background-color: lightgray;
+}
+
+/* pseudo selector that hides scroll bar */
+body::-webkit-scrollbar {
+    display: none;
+  } 
+
+/* Each Img tag in section will have individual  component */
+section img {
+    /*devides the total with/100% of img into 3 sections*/ 
+    width: calc(100% / 3);
+    /*img floats to the left*/
+    float: left;
+    /*BG color for each indivicual img*/
+    background-color: white;
+}
+
+/* logo size */
+.logo {
+    background-color: white;
+    /*top/right/bottom/left*/
+    padding: 2%;
+
+}
+
+/*header & text class white BG*/
+header, .text {
+    background-color: white;
+}
+
+
+.text {
+    color: black;
+    /*makes the other elements wrap around the text*/
+    float: center;
+    /*centers the text inside*/
+    text-align: center;
+    font-size: 15px;
+}
+
+.text .text_2{
+    padding: 25px;
+    /*repects the parent margin & padding whilst aligning the contents*/
+    display: inline-block;
+    /*makes the contents/text align left*/
+    text-align: left;
+} 
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/*Responsive 2nd pic*/
+@media (min-width: 1024px) {
+    body {
+        width: 1024px;
+    }
+}
+
+@media (max-width: 1023.9px) and (min-width: 800px) {
+    body{
+        width: 100%;
+        margin: 0 auto;
+    }
+    section img {
+        width: calc(100% / 2);
+        float: left;
+    }
+}
+
+/*Responsive 3rd pic*/
+@media (max-width: 799.9px) and (min-width: 480px) {
+    section img {
+        width: calc(100% / 1);
+        float: left; 
+    }
+
+    body {
+        width: 100%;
+        margin: 0 auto;
+    } 
+
+
+}
+
+/*Responsive 4th pic*/
+@media (max-width: 479.9px){
+    body {
+        width: 100%;
+        margin: 0 auto;
+    } 
+
+    section img {
+        width: calc(100% / 1);
+        float: left;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 10%;
+    }
+   
+}
+

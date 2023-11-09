@@ -1,0 +1,52 @@
+//Breakpoint for showing 400x400 image
+@mixin img1() {
+    @media (min-width:801px) {
+        .img1{
+            display: block;
+        }
+        .img2{
+            display: none;
+        }        
+        .img3{
+            display: none;
+        }
+    }
+}
+
+//Breakpoint for showing 300x300 image
+@mixin img2() {
+    @media (max-width:801px) and (min-width:481px) {
+        .img1{
+            display: none;
+        }
+        .img2{
+            display: block;
+        }        
+        .img3{
+            display: none;
+        }
+    }
+}
+
+//Breakpoint for showing 200x200 image
+@mixin img3() {
+    @media (max-width:480px) {
+        .img1{
+            display: none; 
+        }
+        .img2{
+            display: none;
+        }        
+        .img3{
+            display: block;
+        }
+    }
+}
+
+//Breakpoints for circles
+@mixin breakpoint-circles(){
+    @media (max-width:621px){
+        display: flex;
+        flex-direction: column;
+    }
+}
